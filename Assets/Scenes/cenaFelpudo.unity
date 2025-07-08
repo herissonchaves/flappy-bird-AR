@@ -237,13 +237,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09202311, y: -0.73665226, z: 0.074549705, w: 0.66582096}
-  m_LocalPosition: {x: 5.09, y: 2.12, z: -0.3}
+  m_LocalRotation: {x: 0.08880733, y: -0.70800674, z: 0.07835285, w: 0.69620436}
+  m_LocalPosition: {x: 5.466, y: 2.454, z: 0.079}
   m_LocalScale: {x: 0.48860702, y: 1.1430349, z: 1.1591}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 13.437, y: -96.035, z: -2.139}
+  m_LocalEulerAnglesHint: {x: 13.568, y: -91.08, z: -0.982}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,6 +483,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: be3a1f08c16d24851b4d5a8898ac17f5, type: 3}
   m_PrefabInstance: {fileID: 495435831}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &750172960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 750172962}
+  - component: {fileID: 750172961}
+  m_Layer: 0
+  m_Name: CriaCercas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &750172961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750172960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edabcc5392f138045874e041650b3de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cercaPrefab: {fileID: 4681540617487984966, guid: 5afb6286d5a8f4b2886514e788ebe780, type: 3}
+  pontoDeCriacao: {fileID: 750172962}
+  nodeRootCena: {fileID: 1267171829}
+  intervaloCriacaoCerca: 1.34
+  velocidadeDaCerca: -75
+--- !u!4 &750172962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750172960}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.65, y: 0, z: 4.39}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954945677
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +571,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954945677}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c570017d1cb18254b95a25ec51e29671, type: 3}
   m_Name: 
@@ -534,6 +583,7 @@ MonoBehaviour:
   materialPiso: {fileID: -621184621979588601, guid: b1a77ede1c0314f2383cc46505668d37, type: 3}
   nodeRootCena: {fileID: 1267171828}
   cercaPrefab: {fileID: 4681540617487984966, guid: 5afb6286d5a8f4b2886514e788ebe780, type: 3}
+  canoPrefab: {fileID: 0}
 --- !u!1 &1252075892
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +834,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4222590894591892680}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9d8e217519ceee42a5e2a514f0f8b46, type: 3}
   m_Name: 
@@ -797,3 +847,4 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 1267171829}
   - {fileID: 954945678}
+  - {fileID: 750172962}

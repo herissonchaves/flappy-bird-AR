@@ -15,11 +15,17 @@ public class actionCenaPrincipal : MonoBehaviour
     public GameObject nodeRootCena; // Referência ao GameObject que contém os objetos a serem movidos
     [Tooltip("Prefab da cerca que será criado.")]
     public GameObject cercaPrefab; // Referência ao GameObject da cerca
+    [Tooltip("Prefab dos canos que serão criados.")]
+    public GameObject canoPrefab; // Referência ao GameObject do cano
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Time.timeScale = 1; // Garante que o tempo esteja em escala normal
         StartCoroutine(RotinaDeCriarCercas()); // Inicia a rotina de criação de cercas
+        StartCoroutine(RotinaDeCriarCano()); // Inicia a rotina de criação de canos
 
 
     }
@@ -54,4 +60,29 @@ public class actionCenaPrincipal : MonoBehaviour
             yield return new WaitForSeconds(intervaloCriacaoCerca); // Espera o intervalo definido antes de criar a próxima cerca
         }
     }
+
+    IEnumerator RotinaDeCriarCano()
+    {
+        yield return new WaitForSeconds(1f); // Espera 1 segundo antes de começar a criar canos
+        while (true) // Loop infinito para criar canos continuamente
+        {
+            GameObject novoCano = Instantiate(canoPrefab, nodeRootCena.transform); // Cria um novo cano como filho do nodeRootCena
+            novoCano.transform.position = new Vector3(0.75f, 0, posicaoZInicialObjetos); // Define a posição inicial do cano
+            novoCano.transform.rotation = Quaternion.Euler(-90, 0, 0); // Define a rotação do cano para zero
+            Rigidbody rb = novoCano.GetComponent<Rigidbody>(); // Obtém o componente Rigidbody do novo cano
+            if (rb != null)
+            {
+                rb.AddForce(new Vector3(0, 0, velocidadeObjeto), ForceMode.Force); // Aplica uma força ao Rigidbody para mover o cano
+            }
+            else
+            {
+                Debug.LogWarning("O prefab do cano não possui um Rigidbody!", novoCano); // Aviso se o Rigidbody não estiver presente
+            }
+            yield return new WaitForSeconds(intervaloCriacaoCerca); // Espera o intervalo definido antes de criar o próximo cano
+        }
+    }
+
+
+
+
 }
