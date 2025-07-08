@@ -3,7 +3,7 @@ using System.Collections; // Necessário para usar IEnumerator e corrotinas
 
 public class GerenciadorDeCercas : MonoBehaviour
 {
-    [Header("Configuracoes de Criação de Cercas")]
+    [Header("Configuracões de Criação de Cercas")]
     public GameObject cercaPrefab; // Referência ao prefab da cerca
     public Transform pontoDeCriacao; // Ponto onde as cercas serão criadas
     public Transform nodeRootCena; // Referência ao GameObject que contém os objetos a serem movidos

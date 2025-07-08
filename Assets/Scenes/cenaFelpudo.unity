@@ -119,6 +119,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &184016990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184016992}
+  - component: {fileID: 184016991}
+  m_Layer: 0
+  m_Name: CriaCanos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &184016991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184016990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3e8bcd57b2f084eb27422664a6fbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canoPrefab: {fileID: 4196436334650930252, guid: 6e086ffbc5835394cb2d8a5397668ede, type: 3}
+  pontoDeCriacao: {fileID: 184016992}
+  nodeRootCena: {fileID: 1267171829}
+  intervaloCriacaoCano: 5.13
+  velocidadeDoCano: -75
+--- !u!4 &184016992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184016990}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5, y: -0.55687416, z: 2.84941}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &296486254
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,3 +897,4 @@ SceneRoots:
   - {fileID: 1267171829}
   - {fileID: 954945678}
   - {fileID: 750172962}
+  - {fileID: 184016992}
